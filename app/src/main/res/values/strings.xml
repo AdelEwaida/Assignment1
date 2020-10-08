@@ -1,0 +1,8 @@
+
+<resources>
+<string name="app_name">Assignment</string>
+<string name="bsearch">Search</string>
+<string name="editText">editText</string>
+<!--    <string name="searchLabel">Enter the tittle or year or Genere of the movie you want to search</string>-->
+<!--    <string name="search">Search</string>-->
+</resources>

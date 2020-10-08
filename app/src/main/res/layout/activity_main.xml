@@ -11,20 +11,20 @@
 
     <TextView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter the tittle or year or Genere of the movie you want to search"
-        tools:layout_editor_absoluteX="4dp"
+        android:layout_width="361dp"
+        android:layout_height="57dp"
         android:layout_margin="8dp"
         android:orientation="vertical"
+        android:text="Enter the tittle or year or Genere of the movie you want to search"
+        tools:layout_editor_absoluteX="4dp"
 
         tools:layout_editor_absoluteY="39dp" />
 
     <EditText
         android:id="@+id/edit_text"
 
-        android:layout_width="277dp"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="20dp"
         android:layout_gravity="left"
         android:layout_margin="8dp"
         tools:layout_editor_absoluteY="89dp" />
@@ -53,15 +53,15 @@
         tools:layout_editor_absoluteX="175dp"
         tools:layout_editor_absoluteY="168dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/result"
         android:layout_width="328dp"
         android:layout_height="438dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center"
         android:layout_margin="8dp"
         android:orientation="vertical">
 
 
-    </TextView>
+    </EditText>
 
 </LinearLayout>

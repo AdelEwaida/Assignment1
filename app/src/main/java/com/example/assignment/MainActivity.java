@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public void bsearchOnClick(View view) {
         ArrayList<Movie> result = new ArrayList<>();
         EditText myText = (EditText) this.findViewById(id.edit_text);
-        TextView res = this.findViewById(id.result);
+        EditText res = this.findViewById(id.result);
         Editable word =myText.getText();
         String spin = spinner1.getSelectedItem().toString();
         boolean numeric = true;

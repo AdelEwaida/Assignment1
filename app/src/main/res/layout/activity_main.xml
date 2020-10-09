@@ -6,36 +6,37 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-
+    android:background="@drawable/backgound1"
     tools:context=".MainActivity">
 
     <TextView
-
         android:layout_width="361dp"
-        android:layout_height="57dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:orientation="vertical"
-        android:text="Enter the tittle or year or Genere of the movie you want to search"
-        tools:layout_editor_absoluteX="4dp"
+           android:textColor="@android:color/white"
 
+        android:text="Enter the tittle or year of the movie you want to search then you can choose the genre from the spinner if you want"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="39dp" />
 
     <EditText
-        android:id="@+id/edit_text"
-
-        android:layout_width="358dp"
-        android:layout_height="20dp"
-        android:layout_gravity="left"
+        android:id="@+id/edit_Text"
+        android:layout_width="328dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
         android:layout_margin="8dp"
-        tools:layout_editor_absoluteY="89dp" />
+        android:background="@android:color/white"
+        android:orientation="vertical" />
 
     <Spinner
         android:id="@+id/spineer"
-
-        android:layout_width="132dp"
-        android:layout_height="67dp"
-        android:layout_gravity="right"
+        android:layout_width="157dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
         android:layout_margin="8dp"
+        android:background="@android:color/white"
         android:orientation="horizontal"
         android:prompt="@string/app_name"></Spinner>
 
@@ -48,20 +49,17 @@
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:onClick="bsearchOnClick"
-        android:text="@string/bsearch"
-
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="168dp" />
+        android:text="@string/bsearch" />
 
     <EditText
         android:id="@+id/result"
         android:layout_width="328dp"
-        android:layout_height="438dp"
+        android:layout_height="280dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
-        android:orientation="vertical">
-
-
-    </EditText>
+        android:textStyle="bold"
+        android:orientation="vertical"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"></EditText>
 
 </LinearLayout>

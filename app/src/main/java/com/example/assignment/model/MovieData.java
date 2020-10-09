@@ -1,9 +1,9 @@
 package com.example.assignment.model;
 
 
-import java.lang.reflect.Array;
+import com.example.assignment.interFaces.IMovieData;
+
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class MovieData implements IMovieData {
     private static ArrayList<Movie> movies = new ArrayList<>();
@@ -27,14 +27,18 @@ public class MovieData implements IMovieData {
 
     public static ArrayList<Movie> searchNum(int num2, String spin) {
         ArrayList<Movie> movies2 = new ArrayList<>();
-        if (spin.equals("ALL")) {
-            searchSpin("All");
+        if (spin.toLowerCase().equals("all")) {
+            for (int i = 0; i < movies.size(); i++) {
+                if (movies.get(i).getYear() == num2 ) {
+                    movies2.add(movies.get(i));
+                }
+            }
+
         } else {
             for (int i = 0; i < movies.size(); i++) {
                 if (movies.get(i).getYear() == num2 && movies.get(i).getGenre().equals(spin)) {
                     movies2.add(movies.get(i));
                 }
-
 
             }
 

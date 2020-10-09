@@ -25,7 +25,6 @@ import  com.example.assignment.controller.MovieFactory;
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private Spinner spinner1;
-//    MovieFactory factory = new MovieFactory();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +33,20 @@ public class MainActivity extends AppCompatActivity {
         MovieFactory factory = new MovieFactory();
         factory.getModel();
         List<String> arr = new ArrayList<>();
-//        MovieData data = new MovieData();
         arr = MovieData.getGenre();
         spinner1  =  findViewById(id.spineer);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
-//
-//
+        editText = findViewById(id.edit_Text);
 
-        editText = findViewById(id.edit_text);
     }
 
 
 
     public void bsearchOnClick(View view) {
         ArrayList<Movie> result = new ArrayList<>();
-        EditText myText = (EditText) this.findViewById(id.edit_text);
+        EditText myText = (EditText) this.findViewById(id.edit_Text);
         EditText res = this.findViewById(id.result);
         Editable word =myText.getText();
         String spin = spinner1.getSelectedItem().toString();
@@ -81,15 +77,17 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-//        Toast.makeText(this, "hii", Toast.LENGTH_SHORT).show();
-
     }
 
     private String print(ArrayList<Movie> result) {
-        String ress = null;
+        String ress = "";
+
+        if(result.isEmpty())
+            ress= "Movie is not exist in this Library";
+        else{
         for (int i =0 ; i<result.size();i++){
             ress+= result.get(i).toString() +"\n";
-        }
+        }}
         return ress;
     }
 }

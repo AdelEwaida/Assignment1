@@ -1,4 +1,4 @@
-package com.example.assignment.model;
+package com.example.assignment.interFaces;
         import java.util.*;
 public interface IMovieData {
     ArrayList<String> getMovies();
